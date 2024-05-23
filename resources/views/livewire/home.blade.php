@@ -30,7 +30,6 @@
 
         <aside class="lg:col-span-8 overflow-hidden">
             <!-- Stories -->
-
             <section> 
             <!-- Питання за скролбар  scrollbar-hide-->
                 <ul class="flex overflow-x-auto scrollbar items-center gap-2">
@@ -43,6 +42,19 @@
                     </li>
                     @endfor
                 </ul>
+            </section>
+
+            <!-- Posts -->
+            <section class="mt-5 space-y-4 p-2">
+
+                <livewire:post.item></livewire:post.item>
+                <livewire:post.item></livewire:post.item>
+                <livewire:post.item></livewire:post.item>
+                <livewire:post.item></livewire:post.item>
+                <livewire:post.item></livewire:post.item>
+                <livewire:post.item></livewire:post.item>
+                <livewire:post.item></livewire:post.item>
+
             </section>
         </aside>
 
