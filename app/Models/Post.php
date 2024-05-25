@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Relations\BelongsTo;
+use Illuminate\Database\Relations\MorphMany;
 
 class Post extends Model
 {
@@ -15,9 +17,9 @@ class Post extends Model
         'allow_commenting'=>'boolean',
     ];
 
-    // function media() : MorphMany {
-    //     return $this->morphMany(Media::class, 'mediable');
-    // }
+    function media() : MorphMany {
+        return $this->morphMany(Media::class, 'mediable');
+    }
 
     function user() : BelongsTo {
         return $this->belongsTo(User::class);
