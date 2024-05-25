@@ -11,6 +11,15 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id',
+        'description',
+        'location',
+        'hide_like_view',
+        'allow_commenting',
+        'type',
+      ];
+
     protected $guarded=[];
     protected $casts=[
         'hide_like_view'=>'boolean',

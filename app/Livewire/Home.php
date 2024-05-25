@@ -2,7 +2,9 @@
 
 namespace App\Livewire;
 
+use App\Models\Post;
 use Livewire\Component;
+
 
 class Home extends Component
 {
