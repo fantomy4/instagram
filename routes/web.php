@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\livewire\Home;
+use App\Livewire\Home;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', Home::class);
@@ -14,6 +14,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/profile/{user}', [ProfileController::class, 'home'] )->name('profile.home');
 });
 
 require __DIR__.'/auth.php';

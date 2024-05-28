@@ -211,13 +211,12 @@
         @auth
 
         <li>
-            <a wire:navigate href="/" class="flex items-center gap-5">
+            <a href="{{route('profile.home',auth()->user()->username)}}" class="flex items-center gap-5">
 
 
-                <x-avatar src="https://source.unsplash.com/400x400?face" class=" w-7 h-7 shrink-0" />
+                <x-avatar class=" w-7 h-7 shrink-0"></x-avatar>
 
-                <h4 x-cloak x-show="!(shrink||drawer)"
-                    class=" text-lg  {{request()->routeIs('profile.home')?'font-bold':'font-medium'}} ">Profile</h4>
+                <h4 x-cloak x-show="!(shrink||drawer)" class="text-lg font-medium">Profile</h4>
             </a>
         </li>
         @endauth
