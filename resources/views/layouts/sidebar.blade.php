@@ -2,7 +2,7 @@
         shrink:false,
         drawer:false
 
-    }" class="menu p-3   w-20 overflow-x-hidden h-full grid bg-white border-r text-base-content"
+    }" class="menu p-3  w-20 overflow-x-hidden h-full grid bg-white border-r text-base-content"
     :class="{'w-72 ':!shrink}">
 
     {{--Logo--}}

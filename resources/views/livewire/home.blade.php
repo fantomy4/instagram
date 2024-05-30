@@ -37,7 +37,7 @@
 
                     @for($i = 0; $i < 10; $i++) 
                     <li class="flex flex-col justify-center w-20 gap-1 p-2">
-                        <x-avatar story src="https://source.unsplash.com/500x500?face-{{$i}}" class="h-14 w-14 /"></x-avatar>
+                        <x-avatar story src="https://source.unsplash.com/500x500?face-{{$i}}" class="h-14 w-14"></x-avatar>
                         <p class="text-us font-medium truncate"> {{fake()->name}} </p>
                     </li>
                     @endfor
@@ -47,13 +47,23 @@
             <!-- Posts -->
             <section class="mt-5 space-y-4 p-2">
 
-                 <livewire:post.item></livewire:post.item>
-                 <livewire:post.item></livewire:post.item>
-                 <livewire:post.item></livewire:post.item>
-                 <livewire:post.item></livewire:post.item>
-                 <livewire:post.item></livewire:post.item>
 
-            </section>
+                @if ($posts)
+        
+                @foreach ($posts as $post)
+        
+                <livewire:post.item></livewire:post.item>
+        
+                @endforeach
+     
+                @else
+        
+                <p class="font-bold flex justify-center">No posts</p>
+        
+                @endif
+        
+              </section>
+        
         </aside>
 
         <!-- Sugestions -->
